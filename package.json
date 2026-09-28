@@ -1,0 +1,12 @@
+{
+  "name": "magus-art",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node tools/server.js",
+    "check": "node tools/check.js",
+    "test": "node --test tools/server.test.js",
+    "build": "node tools/build.js"
+  },
+  "engines": { "node": ">=20" }
+}
