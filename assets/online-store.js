@@ -1,4 +1,4 @@
-import {validatePartners} from './partner-data.js';
+import {validatePartners} from './partner-data.js?v=partners3';
 import {onlineSettings} from './online-settings.js';
 
 export const onlineEnabled = Boolean(onlineSettings.supabaseUrl && onlineSettings.publishableKey);

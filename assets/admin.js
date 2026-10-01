@@ -1,7 +1,7 @@
-import {partnersOf} from './partner-data.js';
+import {partnersOf} from './partner-data.js?v=partners3';
 import {asset,el,json} from './shared.js';
 import {startLogin} from './admin-login.js';
-import {saveOnlineState} from './online-store.js';
+import {saveOnlineState} from './online-store.js?v=partners3';
 let onlineClient;
 const $=s=>document.querySelector(s),pf=$('#product-form'),cf=$('#category-form'),ef=$('#event-form');
 let state,uploads=[],currentProduct,currentCategory,currentEvent=0,dirty=false,busy=false;
