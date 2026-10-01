@@ -1,3 +1,4 @@
+import {validatePartners} from './partner-data.js';
 import {onlineSettings} from './online-settings.js';
 
 export const onlineEnabled = Boolean(onlineSettings.supabaseUrl && onlineSettings.publishableKey);
@@ -43,6 +44,7 @@ export async function readOnlineState(client) {
 
 export function validateContent(catalog, events) {
   if (catalog?.version !== 1 || !Array.isArray(catalog.categories) || !Array.isArray(catalog.products) || !Array.isArray(events)) throw Error('Conteúdo inválido.');
+  if(catalog.partners!==undefined)validatePartners(catalog.partners);
   const cats = new Set(); const ids = new Set();
   const validId = id => typeof id === 'string' && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(id);
   for (const c of catalog.categories) {
